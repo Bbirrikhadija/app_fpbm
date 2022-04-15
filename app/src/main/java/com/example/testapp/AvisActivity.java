@@ -29,7 +29,7 @@ public class AvisActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Avisactivity_main);
+        setContentView(R.layout.avisactivity_main);
         NewsRecycle = findViewById(R.id.avis_menu);
         NewsRecycle.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);

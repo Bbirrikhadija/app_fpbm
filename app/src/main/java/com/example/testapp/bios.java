@@ -2,63 +2,87 @@ package com.example.testapp;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link bios#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+
+
 public class bios extends Fragment {
+    DatabaseReference database;
+    String message;
+    ListView simpleList;
+    Button callbtn;
+    String List[] = {"semestre 1", "semestre 2", "semestre 3", "semestre 4"};
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public bios() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment bios.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static bios newInstance(String param1, String param2) {
-        bios fragment = new bios();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view;
+        view = inflater.inflate(R.layout.fragment_isi, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bios, container, false);
+        simpleList = (ListView) view.findViewById(R.id.simpleListView);
+        //callbtn= (Button) view.findViewById(R.id.btn_1);
+
+
+        ArrayList<String> myData = new ArrayList<String>();
+
+        myData.add("semestre 1");
+        myData.add("semestre 2");
+        myData.add("semestre 3");
+        myData.add("semestre 4");
+
+        String test = "https://firebasestorage.googleapis.com/v0/b/miniprojet-66ea3.appspot.com/o/EDT_ISI-S1_17-01-2022%20vf.pdf?alt=media&token=9399a94a-1884-459a-b5d5-669e3f75dd7c";
+
+        BiosAdapter adapter = new BiosAdapter(getContext(), myData);
+        simpleList.setAdapter(adapter);
+
+        // ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(), R.layout.layout,R.id.textView ,List);
+        //simpleList.setAdapter(arrayAdapter);
+
+        database=FirebaseDatabase.getInstance().getReference().child("pdf");
+        database.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                // getting a DataSnapshot for the location at the specified
+                // relative path and getting in the link variable
+                message = dataSnapshot.getValue(String.class);
+                Log.d("ibt", message);
+                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+            }
+
+            // this will called when any problem
+            // occurs in getting data
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // we are showing that error message in toast
+                Toast.makeText(getContext(), "Error Loading Pdf", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
+        // After clicking here alert box will come
+
+
+
+
+        return view;
     }
 }

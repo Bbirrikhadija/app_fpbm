@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -25,50 +26,67 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class stri extends Fragment implements EmploiAdapter.ItemClickListener{
-    EmploiAdapter adapter;
+public class stri extends Fragment{
     DatabaseReference database;
-    RecyclerView recyclerView;
-    ArrayList<String> emploiSemestre = new ArrayList<String>();
+    String message;
+    ListView simpleList;
+    Button callbtn;
+    String List[] = {"semestre 1", "semestre 2", "semestre 3", "semestre 4"};
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view;
-            view = inflater.inflate(R.layout.fragment_stri, container, false);
+            view = inflater.inflate(R.layout.fragment_isi, container, false);
         // Inflate the layout for this fragment
 
-        recyclerView = view.findViewById(R.id.emploi);
+        simpleList = (ListView) view.findViewById(R.id.simpleListView);
+        //callbtn= (Button) view.findViewById(R.id.btn_1);
 
-        emploiSemestre.add("semestre 1");
-        emploiSemestre.add("semestre 2");
-        emploiSemestre.add("semestre 3");
-        emploiSemestre.add("semestre 4");
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
-        //remplir();
-        adapter = new EmploiAdapter(getContext(), emploiSemestre);
-        recyclerView.setAdapter(adapter);
+        ArrayList<String> myData = new ArrayList<String>();
+
+        myData.add("semestre 1");
+        myData.add("semestre 2");
+        myData.add("semestre 3");
+        myData.add("semestre 4");
+
+
+        StriAdapter adapter = new StriAdapter(getContext(), myData);
+        simpleList.setAdapter(adapter);
+
+        // ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(), R.layout.layout,R.id.textView ,List);
+        //simpleList.setAdapter(arrayAdapter);
+
+        database=FirebaseDatabase.getInstance().getReference().child("pdf");
+        database.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                // getting a DataSnapshot for the location at the specified
+                // relative path and getting in the link variable
+                message = dataSnapshot.getValue(String.class);
+                Log.d("ibt", message);
+                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+            }
+
+            // this will called when any problem
+            // occurs in getting data
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // we are showing that error message in toast
+                Toast.makeText(getContext(), "Error Loading Pdf", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
+        // After clicking here alert box will come
 
 
 
 
         return view;
     }
-   /* private void remplir(){
-        emploiSemestre.add(new Emploi("semestre 1"));
-        emploiSemestre.add(new Emploi("semestre 2"));
-        emploiSemestre.add(new Emploi("semestre 3"));
-        emploiSemestre.add(new Emploi("semestre 4"));
-    }
-
-    */
-
-    @Override
-    public void onItemClick(View view, int position) {
-    }
 }
-
-
-

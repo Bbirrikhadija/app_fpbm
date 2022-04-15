@@ -10,8 +10,9 @@
         android:clickable="true"
         android:gravity="center"
         android:padding="6dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="8dp"
+        android:background="@drawable/reduce_corner1"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
         android:id="@+id/cardid"
         app:cardBackgroundColor="@color/CornflowerBlue">
         <LinearLayout

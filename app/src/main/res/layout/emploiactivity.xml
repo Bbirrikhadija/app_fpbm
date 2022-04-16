@@ -8,7 +8,7 @@
     android:background="#A7E4E6"
 
 
-    tools:context=".MainActivity">
+    tools:context=".EmploiActivity">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -55,4 +55,4 @@
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

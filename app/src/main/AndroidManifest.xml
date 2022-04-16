@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestApp">
         <activity
-            android:name=".AvisActivity"
+            android:name=".EmploiActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,15 +26,6 @@
         <activity
             android:name=".ViewpdfActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

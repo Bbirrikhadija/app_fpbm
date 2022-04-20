@@ -112,7 +112,7 @@
                 android:layout_marginBottom="122dp"
                 android:background="@drawable/valider_btn"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Valider"
+                android:text="Validate"
                 android:textColor="#0C508B"
                 android:textSize="20dp" />
 

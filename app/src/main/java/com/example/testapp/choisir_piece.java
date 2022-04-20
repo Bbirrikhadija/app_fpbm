@@ -1,5 +1,6 @@
 package com.example.testapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,8 +11,12 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,6 +27,9 @@ public class choisir_piece extends AppCompatActivity {
      String chois1,choix2,chois3;
      //FirebaseAuth mAuth;
      DatabaseReference grp1=FirebaseDatabase.getInstance().getReference();
+     FirebaseAuth mAuth;
+     FirebaseUser firebaseUser;
+     String test;
 
      //DatabaseReference grp2;
      //DatabaseReference grp3;
@@ -33,8 +41,11 @@ public class choisir_piece extends AppCompatActivity {
         setContentView(R.layout.activity_choisir_piece);
         val=findViewById(R.id.button5);
         out=findViewById(R.id.logout);
-       // mAuth = FirebaseAuth.getInstance();
-        //grp1
+        mAuth = FirebaseAuth.getInstance();
+        firebaseUser = mAuth.getCurrentUser();
+
+
+
         AtestScolar=findViewById(R.id.simpleRadioButton);
         carte=findViewById(R.id.simpleRadioButton1);
         //grp2
@@ -45,9 +56,11 @@ public class choisir_piece extends AppCompatActivity {
         //grp3
         AtestDeug=findViewById(R.id.simpleRadioButton6) ;
         AtestVal=findViewById(R.id.simpleRadioButton7);
-        grp1= FirebaseDatabase.getInstance().getReference("Piece1");
+        grp1= FirebaseDatabase.getInstance().getReference("Piece");
         //grp2= FirebaseDatabase.getInstance().getReference("Piece2");
         //grp3= FirebaseDatabase.getInstance().getReference("Piece3");
+
+
 
         val.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +120,31 @@ public class choisir_piece extends AppCompatActivity {
                 user1.put("P1", chois1);
                 user1.put("P2", choix2);
                 user1.put("P3", chois3);
-                grp1.child("Piece1").setValue(user1);
+
+                FirebaseDatabase.getInstance().getReference().child("users").child(firebaseUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot1) {
+                        String Nb = String.valueOf(snapshot1.child("nbDemande").getValue());
+                        Toast.makeText(choisir_piece.this, Nb, Toast.LENGTH_SHORT).show();
+                        int nber = Integer.parseInt(Nb);
+                        nber=nber+1;
+                        String pc = String.valueOf(nber);
+
+                        FirebaseDatabase.getInstance().getReference().child("users").child(firebaseUser.getUid()).child("nbDemande").setValue(pc);
+
+                        grp1.child(firebaseUser.getUid()).child(pc).setValue(user1);
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+
+
 
 
                 //usersRef.setValue(users);

@@ -66,13 +66,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp">
 
-                <RadioButton
-                    android:id="@+id/simpleRadioButton8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="BAC+2 "
-                    android:textSize="15dp" />
+
 
                 <RadioButton
                     android:id="@+id/simpleRadioButton9"
@@ -81,6 +75,14 @@
                     android:checked="true"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="BAC  "
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/simpleRadioButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="BAC+2 "
                     android:textSize="15dp" />
                 <RadioButton
                     android:id="@+id/simpleRadioButton10"

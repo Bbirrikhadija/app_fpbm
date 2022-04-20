@@ -42,8 +42,8 @@
             android:layout_height="457dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="22dp"
-            android:layout_marginTop="108dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="141dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/frame_box"
             android:elevation="2dp">
@@ -161,10 +161,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="398dp"
-            android:layout_height="318dp"
+            android:layout_width="399dp"
+            android:layout_height="138dp"
             android:layout_below="@+id/frame_1021"
-            android:layout_marginTop="-4dp">
+            android:layout_marginTop="29dp">
 
             <Button
                 android:id="@+id/button5"
@@ -174,9 +174,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="45dp"
-                android:layout_marginEnd="196dp"
-                android:layout_marginBottom="99dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginEnd="215dp"
+                android:layout_marginBottom="58dp"
                 android:background="@drawable/valider_btn"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Validate"
@@ -191,8 +191,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="85dp"
-                android:layout_marginEnd="14dp"
-                android:layout_marginBottom="99dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="61dp"
                 android:background="@drawable/valider_btn"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Log out "

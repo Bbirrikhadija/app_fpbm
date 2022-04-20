@@ -40,6 +40,8 @@ public class Scholarite extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btnSubmit_login);
 
     }
+
+
     public void signin(View view){
         String userName2 = userName.getText().toString();
         String userName1 = userName2 + "@gmail.com";

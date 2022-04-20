@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A7E4E6"
+    android:background="#FFFFFF"
     android:orientation="horizontal">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -24,13 +24,14 @@
 
     <Button
         android:id="@+id/btn_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
         android:layout_gravity="center"
-        android:background="@drawable/reduce_corner"
+        android:background="@drawable/circle_background"
         android:gravity="center"
-        android:text="click"
-        android:textColor="#B6126C"
+        app:srcCompat="@drawable/icon_button"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.78"

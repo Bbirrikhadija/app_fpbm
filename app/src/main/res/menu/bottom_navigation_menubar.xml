@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/news"
+        android:enabled="true"
+        android:icon="@drawable/news"
+        android:title="News"/>
+
+    <item
+        android:id="@+id/emploi"
+        android:enabled="true"
+        android:icon="@drawable/emploi"
+        android:title="Planning"/>
+    <item
+        android:id="@+id/school"
+        android:enabled="true"
+        android:icon="@drawable/scolarite"
+        android:title="Scolarité"/>
+    <item
+        android:id="@+id/about"
+        android:enabled="true"
+        android:icon="@drawable/about"
+        android:title="About us"/>
+</menu>

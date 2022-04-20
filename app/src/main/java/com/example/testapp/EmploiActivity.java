@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
@@ -18,6 +19,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -26,6 +28,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.example.testapp.Emploi;
+import com.example.testapp.isi;
+import com.example.testapp.stri;
 
 public class EmploiActivity extends AppCompatActivity {
 
@@ -44,7 +49,8 @@ public class EmploiActivity extends AppCompatActivity {
         setContentView(R.layout.emploiactivity);
         //view = findViewById(R.id.view);
 
-        viewPager=findViewById(R.id.viewpager);
+        // Set Home selected
+            viewPager=findViewById(R.id.viewpager);
         tableLayout=findViewById(R.id.tabLayout);
         isi=findViewById(R.id.isiId);
         stri=findViewById(R.id.striId);

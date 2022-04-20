@@ -1,5 +1,13 @@
 <resources>
-    <string name="app_name">test app</string>
+    <string name="app_name">FPBM</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us_description">
+        The Beni Mellal Polydisciplinary Faculty is a higher education institution of the Sultan Moulay
+        Slimane University .Opened from the 2003-2004 academic year,it offers initial training and continuing education in various disciplinary fields: letters, human sciences, arts, computing, chemistry, physics,
+        life and earth sciences, legal, social and economic sciences, languages ​​and communication….
+        The FPBM offers diversified training combining basic training and vocational training.
+        Its purpose is to prepare and deliver the national diplomas of the Bachelor of Fundamental Studies (LEF),
+        the Professional License (LP) and the Master.</string>
+    <string name="copy_right" translatable="false">Copyrights © %1$d</string>
 </resources>

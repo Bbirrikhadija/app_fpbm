@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -47,12 +48,10 @@ public class isi extends Fragment {
 
 
         ArrayList<String> myData = new ArrayList<String>();
-
         myData.add("semestre 1");
         myData.add("semestre 2");
         myData.add("semestre 3");
         myData.add("semestre 4");
-
         String test = "https://firebasestorage.googleapis.com/v0/b/miniprojet-66ea3.appspot.com/o/EDT_ISI-S1_17-01-2022%20vf.pdf?alt=media&token=9399a94a-1884-459a-b5d5-669e3f75dd7c";
 
         MyAdapter adapter = new MyAdapter(getContext(), myData);

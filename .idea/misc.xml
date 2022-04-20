@@ -3,6 +3,35 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.188" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/about.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/about_us.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/actualite.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/circle_background.xml" value="0.173" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/copyright.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/effect.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/emploi_de_temps.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.188" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/ic_schol.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/icon_button.xml" value="0.1255" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/news.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/reduce_corner.xml" value="0.188" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/reduce_corner1.xml" value="0.173" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/drawable/scholarite.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/activity_about.xml" value="0.1640625" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/activity_main.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/activity_neews.xml" value="0.1640625" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/activity_scholarite.xml" value="0.1640625" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/activity_splashscreen.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/activity_view_pdf.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/avisactivity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/emploiactivity.xml" value="0.22" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/fragment_isi.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/layout.xml" value="0.22" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/per_row.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/layout/strilayout.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/menu/bottom_navigation_menubar.xml" value="0.1640625" />
+        <entry key="..\:/Users/Admin/fpbmapp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/Ayoub karam/AndroidStudioProjects/testapp/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/Users/Ibtissam/Desktop/testapp/app/src/main/res/drawable/reduce_corner.xml" value="0.2" />
         <entry key="..\:/Users/Ibtissam/Desktop/testapp/app/src/main/res/drawable/reduce_corner1.xml" value="0.1" />
@@ -31,5 +60,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1640625" />
+      </ProjectState>
+    </option>
   </component>
 </project>

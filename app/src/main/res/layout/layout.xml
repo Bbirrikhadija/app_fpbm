@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="#FFFFFF"
+=======
+    android:background="#E5E5E5"
+>>>>>>> c20b9da76144702bb955358a53375211e8692db1
     android:orientation="horizontal">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -16,14 +20,17 @@
         android:layout_height="60dp"
         android:paddingLeft="20dp"
         android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"
         android:gravity="center"
-        android:textColor="@color/black"
+        android:textColor="#0C508B"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_1"
+<<<<<<< HEAD
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:padding="10dp"
@@ -32,6 +39,17 @@
         android:gravity="center"
         app:srcCompat="@drawable/icon_button"
         android:textColor="#FFFFFF"
+=======
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+
+        android:text="click"
+        android:textColor="@color/black"
+>>>>>>> c20b9da76144702bb955358a53375211e8692db1
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.78"

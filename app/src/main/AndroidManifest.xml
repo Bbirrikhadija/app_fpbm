@@ -26,12 +26,17 @@
             android:name=".About"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
             android:name=".EmploiActivity"
             android:exported="false"/>
         <activity
             android:name=".splashscreen"
             android:theme="@style/splash"
             android:exported="true">
+=======
+            android:name=".AvisActivity"
+            android:exported="true" >
+>>>>>>> c20b9da76144702bb955358a53375211e8692db1
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

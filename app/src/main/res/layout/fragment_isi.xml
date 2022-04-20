@@ -3,7 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+<<<<<<< HEAD
     android:background="#FFFFFF"
+=======
+    android:background="#E5E5E5"
+>>>>>>> c20b9da76144702bb955358a53375211e8692db1
     android:orientation="vertical"
     tools:context=".isi">
 

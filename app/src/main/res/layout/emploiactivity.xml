@@ -4,8 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="#FFFFFF"
     android:backgroundTint="#FFFFFF"
+=======
+    android:orientation="vertical"
+    android:background="#E5E5E5"
+>>>>>>> c20b9da76144702bb955358a53375211e8692db1
 
 
     android:orientation="vertical"
@@ -15,27 +20,42 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:background="@color/purple_200"
+=======
+        android:fontFamily="@font/poppins_semibold"
+        android:background="#E5E5E5"
+        android:textSize="30sp"
+        android:textStyle="bold"
+>>>>>>> c20b9da76144702bb955358a53375211e8692db1
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+<<<<<<< HEAD
         app:tabTextColor="#000000">
+=======
+
+        app:tabTextColor="@color/black">
+>>>>>>> c20b9da76144702bb955358a53375211e8692db1
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/isiId"
+            android:textSize="30sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ISI" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/striId"
+            android:textSize="30sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="STRI" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/biosId"
+            android:textSize="30sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BIOS" />
@@ -47,7 +67,11 @@
         android:layout_width="409dp"
         android:layout_height="681dp"
         android:layout_marginTop="2dp"
+<<<<<<< HEAD
         android:background="#FFFFFF"
+=======
+        android:background="#E5E5E5"
+>>>>>>> c20b9da76144702bb955358a53375211e8692db1
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

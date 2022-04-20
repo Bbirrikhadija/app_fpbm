@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Retrait"
+    android:background="#FFFFFF">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame5"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp"
+        >
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="564dp"
+            android:background="@drawable/rectangle_1"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Cette page est consacrée pour effuctuer une demande de pièce "
+            android:textAlignment="center"
+            android:textAppearance="@style/bienvenu_vo"
+            android:textColor="@color/black"/>
+
+        <RelativeLayout
+            android:id="@+id/frame2"
+            android:layout_width="416dp"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="194dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/frame_box"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/Coche1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/cochez_vos_demandes"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:id="@+id/grp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Coche1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/simpleRadioButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="BAC+2 "
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/simpleRadioButton9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="BAC  "
+                    android:textSize="15dp" />
+            </RadioGroup>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/frame3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/frame2">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="61dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="197dp"
+                android:background="@drawable/valider_btn"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Valider"
+                android:textColor="#0C508B"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="61dp"
+
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginBottom="197dp"
+                android:layout_toEndOf="@+id/button7"
+                android:background="@drawable/valider_btn"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Log out "
+                android:textColor="#0C508B"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

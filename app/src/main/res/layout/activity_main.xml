@@ -153,8 +153,9 @@
             android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="5dp"
             app:cardElevation="6dp">
+
             <LinearLayout
-                android:id="@+id/c3"
+                android:id="@+id/c4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -167,10 +168,10 @@
                     android:background="@drawable/emploi_de_temps" />
 
                 <TextView
-                    android:layout_width="123dp"
-                    android:layout_height="51dp"
+                    android:layout_width="124dp"
+                    android:layout_height="49dp"
                     android:fontFamily="monospace"
-                    android:text="Emploi du temps"
+                    android:text="Emloi du temps"
                     android:textAlignment="center"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -187,7 +188,7 @@
             app:cardElevation="6dp">
 
             <LinearLayout
-                android:id="@+id/c4"
+                android:id="@+id/c3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"

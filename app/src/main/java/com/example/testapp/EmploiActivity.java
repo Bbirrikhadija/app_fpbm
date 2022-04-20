@@ -47,8 +47,6 @@ public class EmploiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emploiactivity);
-        //view = findViewById(R.id.view);
-
         // Set Home selected
             viewPager=findViewById(R.id.viewpager);
         tableLayout=findViewById(R.id.tabLayout);

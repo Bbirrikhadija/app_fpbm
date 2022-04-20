@@ -28,6 +28,21 @@
         <activity
             android:name=".EmploiActivity"
             android:exported="false"/>
+
+        <activity android:name=".afterLogin"
+            android:exported="false"/>
+        <activity
+            android:name=".Retrait"
+            android:exported="false" />
+        <activity
+            android:name=".choisir_piece"
+            android:exported="false" />
+        <activity
+            android:name=".rdvPage"
+            android:exported="false" />
+        <activity
+            android:name=".demandePiece"
+            android:exported="false" />
         <activity
             android:name=".splashscreen"
             android:theme="@style/splash"

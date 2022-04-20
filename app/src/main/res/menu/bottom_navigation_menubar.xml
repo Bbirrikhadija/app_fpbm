@@ -17,7 +17,7 @@
         android:icon="@drawable/emploi"
         android:title="Planning"/>
     <item
-        android:id="@+id/school"
+        android:id="@+id/login"
         android:enabled="true"
         android:icon="@drawable/scolarite"
         android:title="Scolarité"/>

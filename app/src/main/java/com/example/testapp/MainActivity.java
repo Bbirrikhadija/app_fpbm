@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity  {
                         startActivity(new Intent(getApplicationContext(), About.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.school:
+                    case R.id.login:
                         startActivity(new Intent(getApplicationContext(), Scholarite.class));
                         overridePendingTransition(0, 0);
                         return true;
@@ -66,20 +66,20 @@ public class MainActivity extends AppCompatActivity  {
                 @Override
                 public void onClick(View v) {
                     if (finali==0){
-                        Intent intent1 = new Intent( MainActivity.this ,Neews.class);
-                        startActivity(intent1);
+                        Intent intent = new Intent( MainActivity.this ,Neews.class);
+                        startActivity(intent);
                     }
                     else if (finali==1){
-                        Intent intent2 = new Intent( MainActivity.this ,About.class);
-                        startActivity(intent2);
+                        Intent intent = new Intent( MainActivity.this ,About.class);
+                        startActivity(intent);
                     }
                     else if (finali==3){
-                        Intent intent3 = new Intent( MainActivity.this ,Scholarite.class);
-                        startActivity(intent3);
+                        Intent intent = new Intent( MainActivity.this ,Scholarite.class);
+                        startActivity(intent);
                     }
-                    else if (finali==4){
-                        Intent intent4 = new Intent( MainActivity.this ,EmploiActivity.class);
-                        startActivity(intent4);
+                    else{
+                        Intent intent = new Intent( MainActivity.this ,EmploiActivity.class);
+                        startActivity(intent);
                     }
                 }
             });

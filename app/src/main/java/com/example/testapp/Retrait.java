@@ -17,7 +17,7 @@ import java.util.HashMap;
 
 public class Retrait extends AppCompatActivity {
     Button btnval_retrait,logout;
-    RadioButton BAC2,BAC;
+    RadioButton BAC2,BAC,BAC3;
     String choix;
     DatabaseReference grp2= FirebaseDatabase.getInstance().getReference();
     @Override
@@ -27,6 +27,7 @@ public class Retrait extends AppCompatActivity {
         btnval_retrait=findViewById(R.id.button7);
         BAC=findViewById(R.id.simpleRadioButton8);
         BAC2=findViewById(R.id.simpleRadioButton9);
+        BAC3=findViewById(R.id.simpleRadioButton10);
         logout=findViewById(R.id.logout);
         btnval_retrait.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +37,11 @@ public class Retrait extends AppCompatActivity {
                 }
                else if(BAC2.isChecked()){
                     choix=BAC2.getText().toString();
+                }
+               else if(BAC3.isChecked()){
+                    choix=BAC3.getText().toString();
+
+
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "choisir une des choix", Toast.LENGTH_LONG).show();

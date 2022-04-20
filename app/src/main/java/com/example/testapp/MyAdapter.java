@@ -64,45 +64,50 @@ public class MyAdapter extends ArrayAdapter<String> {
                         // getting a DataSnapshot for the location at the specified
                         // relative path and getting in the link variable
                         message = dataSnapshot.getValue(String.class);
-                        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+                        if (message.equals("----")){
+                            Toast.makeText(getContext(), "Vide", Toast.LENGTH_SHORT).show();
+                        }else {
+                            CharSequence options[] = new CharSequence[]{
+                                    "Download",
+                                    "View",
+                                    "Cancel"
+                            };
+                            AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                            builder.setTitle("Choose One");
+                            builder.setItems(options, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // we will be downloading the pdf
+                                    if (which == 0) {
+                                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(message));
+                                        getContext().startActivity(intent);
+                                    }
+                                    // We will view the pdf
+                                    if (which == 1) {
+                                        Intent intent = new Intent(v.getContext(), ViewpdfActivity.class);
+                                        intent.putExtra("url", message);
+                                        getContext().startActivity(intent);
+                                    }
+                                }
+                            });
+                            builder.show();
+                        }
                     }
 
                     // this will called when any problem
-                    // occurs in getting data
+// occurs in getting data
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
                         // we are showing that error message in toast
                         Toast.makeText(getContext(), "Error Loading Pdf", Toast.LENGTH_SHORT).show();
                     }
                 });
-                CharSequence options[] = new CharSequence[]{
-                        "Download",
-                        "View",
-                        "Cancel"
-                };
-                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                builder.setTitle("Choose One");
-                builder.setItems(options, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // we will be downloading the pdf
-                        if (which == 0) {
-                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(message));
-                            getContext().startActivity(intent);
-                        }
-                        // We will view the pdf
-                        if (which == 1) {
-                            Intent intent = new Intent(v.getContext(), ViewpdfActivity.class);
-                            intent.putExtra("url", message);
-                            getContext().startActivity(intent);
-                        }
-                    }
-                });
-                builder.show();
+
+
             }
 
         });
         return convertView;
     }
 }
-

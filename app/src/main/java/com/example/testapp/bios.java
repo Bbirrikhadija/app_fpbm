@@ -63,7 +63,7 @@ public class bios extends Fragment {
                 // relative path and getting in the link variable
                 message = dataSnapshot.getValue(String.class);
                 Log.d("ibt", message);
-                Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
             }
 
             // this will called when any problem
@@ -71,7 +71,7 @@ public class bios extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 // we are showing that error message in toast
-                Toast.makeText(getContext(), "Error Loading Pdf", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(), "Error Loading Pdf", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -120,7 +120,6 @@ public class choisir_piece extends AppCompatActivity {
                 user1.put("P1", chois1);
                 user1.put("P2", choix2);
                 user1.put("P3", chois3);
-
                 FirebaseDatabase.getInstance().getReference().child("users").child(firebaseUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot1) {

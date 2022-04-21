@@ -83,7 +83,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/button_login"
         android:fontFamily="@font/poppinsbold"
-        android:text="Login in"
+        android:text="Login"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:textStyle="bold"

@@ -52,7 +52,7 @@ public class BiosAdapter extends ArrayAdapter<String> {
 
 
         textView.setText(item);
-        list_but.setText(item);
+
         list_but.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

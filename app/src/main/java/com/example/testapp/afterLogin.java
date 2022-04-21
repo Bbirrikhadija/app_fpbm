@@ -15,7 +15,7 @@ public class afterLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_login);
         btn1=findViewById(R.id.button);
-        btn2=findViewById(R.id.button2);
+       // btn2=findViewById(R.id.button2);
         //page demande de piece
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,14 +27,14 @@ public class afterLogin extends AppCompatActivity {
             }
         });
         //page RDV
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(afterLogin.this, rdvPage.class);
-                startActivity(intent);
+       // btn2.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+           // public void onClick(View view) {
+              //  Intent intent = new Intent(afterLogin.this, rdvPage.class);
+            //    startActivity(intent);
 
-            }
-        });
+          //  }
+        //});
 
     }
 }

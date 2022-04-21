@@ -31,7 +31,7 @@
             android:background="@drawable/rectangle_1"
             android:fontFamily="@font/poppins_semibold"
             android:gravity="center_horizontal|center_vertical"
-            android:text="Cette page est consacrée pour effuctuer une demande de pièce "
+            android:text="Demande de pièce "
             android:textAlignment="center"
             android:textAppearance="@style/bienvenu_vo"
             android:textColor="@color/black" />
@@ -177,11 +177,11 @@
                 android:layout_marginStart="26dp"
                 android:layout_marginEnd="215dp"
                 android:layout_marginBottom="58dp"
-                android:background="@drawable/valider_btn"
+                android:background="#0C508B"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Validate"
                 android:textAlignment="center"
-                android:textColor="#0C508B"
+                android:textColor="#ffffff"
                 android:textSize="20dp" />
 
             <Button
@@ -191,12 +191,12 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="85dp"
-                android:layout_marginEnd="11dp"
-                android:layout_marginBottom="61dp"
-                android:background="@drawable/valider_btn"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="55dp"
+                android:background="#0C508B"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Log out "
-                android:textColor="#0C508B"
+                android:textColor="#ffffff"
                 android:textSize="20dp" />
 
 
